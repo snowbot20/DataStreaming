@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    
+    <!-- TODO: VideoJs  control to stream Audio/Video
+        Scenario 1 - Live Streaming - No file size available
+        Scenario 2 - Recorded Audio - File size available
+        Scenario 3 - Recorded Audio - File size not available
+        Should support provided options
+     -->
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+        
+        <source src="@Url.Action("StreamAudio","Home")" type="audio/mp4">
+    </video>
+
+
+</div>
